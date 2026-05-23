@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>BorneLIKE</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="../index.html"><img class="logo" src="../img/Bloodborne-Emblem.png" alt="logo"></a>
+            </div>
+            
+            <nav class="menu">
+                <a href="../index.html">Inicio</a>
+                <a href="../telas/bossesTela.html">Bosses</a>
+                <a href="#">Armas</a>
+            </nav>
+        </header>
+
+        <main class="conteudo">
+            <section class="secConteudo">
+                <div class="topo">
+                    <div class="texto">
+                        <p class="dataAtual"><script>
+                    data = new Date
+
+                    //Dia da Semana
+                    diaSemana = new Array('Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado')
+
+                    mes = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro')
+
+                    
+                    document.write(diaSemana[data.getDay()] + ', ' + data.getDate() + ' de ' + mes[data.getMonth()] + ' de ' + data.getFullYear())
+                </script></p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tituloPagina">
+                <h1>Bosses</h1>
+                <p>Vamos conferir os inimigos principais do jogo!</p>
+            </div>
+            
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="texto">
+                        <h1>Fera Clerical</h1>
+                        <img src="../img/Foto_FeraClerical.jpg" alt="Boss">
+                        <p>A <strong class="nomeBoss">Fera Clerical</strong> provavelmente será o primeiro chefe que o jogador encontrará, embora derrotá-la seja totalmente opcional. 
+                            A <strong class="nomeBoss">Fera Clerical</strong> é extremamente vulnerável a dano de <strong class="danoFogo">Fogo</strong> e a dano de <strong class="danoSerra">Serra</strong>, portanto, usar esses tipos de dano tornará a luta mais fácil.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="texto">
+                        <h1>Padre Gascoigne</h1>
+                        <img src="../img/Foto_PadreGascoigne.jpg" alt="Boss">
+                        <p>Aqui ficará o texto do Gascoigne
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </body>
+
+    <footer>
+        <img class="logo" src="../img/Bloodborne-Emblem.png" alt="">
+        <p>
+            <a href="https://www.fromsoftware.jp/ww/" target="_blank"><i class="fromSite"></i>Site Oficial da FromSoftware</a>
+        </p>
+    </footer>
+
+</html>

@@ -3,19 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style.css">
-        <title>BorneLIKE
-        </title>
+        <title>BorneLIKE</title>
+        <script type="text/JavaScript">
+            //Função para abrir a POP-UP
+            function abrirDetalhes(nome,img,desc){
+                url=`pop_produtos.html?produto=${encodeURIComponent(nome)}&imagem=${encodeURIComponent(img)}&descricao=${encodeURIComponent(desc)}`
+                window.open(url, "_blank", "width=800, height=700")
+        </script>
+
     </head>
 
     <body>
         <header class="header">
             <div class="logo">
-                <img class="logo" src="img/Bloodborne-Emblem.png" alt="logo">
+                <a href="../index.html"><img class="logo" src="img/Bloodborne-Emblem.png" alt="logo"></a>
             </div>
             
             <nav class="menu">
                 <a href="#">Inicio</a>
-                <a href="#">Bosses</a>
+                <a href="../telas/bossesTela.html">Bosses</a>
                 <a href="#">Armas</a>
             </nav>
         </header>
@@ -23,6 +29,23 @@
         <div class="banner"></div>
         
         <main class="conteudo">
+            <section class="secConteudo">
+                <div class="topo">
+                    <div class="texto">
+                        <p class="dataAtual"><script>
+                    data = new Date
+
+                    //Dia da Semana
+                    diaSemana = new Array('Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado')
+
+                    mes = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro')
+
+                    
+                    document.write(diaSemana[data.getDay()] + ', ' + data.getDate() + ' de ' + mes[data.getMonth()] + ' de ' + data.getFullYear())
+                </script></p>
+                    </div>
+                </div>
+            </section>
             
             <section class="secConteudo">
                 <div class="topo">
@@ -63,9 +86,13 @@
             </section>
 
             <section class="outrosJogos">
-                <h2>Outros jogos da FromSoftware</h2>
+                <h2>Outros jogos "Souls" da FromSoftware</h2>
 
                 <div class="jogos">
+                    <div class="jogo">
+                        <img src="img/Capa_DemonSouls.png" alt="">
+                        <h3>Demon Souls</h3>
+                    </div>
                     <div class="jogo">
                         <img src="img/Capa_DarkSouls1.jpg" alt="">
                         <h3>Dark Souls</h3>
@@ -83,6 +110,23 @@
                         <img src="img/Capa_Sekiro.png" alt="">
                         <h3>Sekiro</h3>
                     </div>
+                    <div class="jogo">
+                        <img src="img/Capa_EldenRing.jpg" alt="">
+                        <h3>Elden Ring</h3>
+                    </div>
+                    <div class="jogo">
+                        <img src="img/Capa_EldenRingNightreign.jpg" alt="">
+                        <h3>Elden Ring Nightreign</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secConteudo">
+                <div class="topo">
+                    <div class="texto">
+                        <h1>Sede FromSoftware</h1>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12960.956441758457!2d139.6897098!3d35.6957331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f31aee607a17%3A0xb19b1bca69774bb8!2sFromSoftware%2C%20Inc.!5e0!3m2!1sen!2sbr!4v1779492005375!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </section>
 
@@ -92,6 +136,9 @@
 
     <footer>
         <img class="logo" src="img/Bloodborne-Emblem.png" alt="">
+        <p>
+            <a href="https://www.fromsoftware.jp/ww/" target="_blank"><i class="fromSite"></i>Site Oficial da FromSoftware</a>
+        </p>
     </footer>
 
 </html>
