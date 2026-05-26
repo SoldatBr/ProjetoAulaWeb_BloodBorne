@@ -4,8 +4,38 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" href="../img/Bloodborne-Emblem.png" type="image/x-con">
         <title>BorneLIKE</title>
     </head>
+    <script>
+        function abrirVideo(nome, video){
+            document.getElementById("nomeBoss").innerHTML = nome;
+
+            document.getElementById("popup").style.display = "flex";
+
+            document.getElementById("video").src = video + "?autoplay=1";
+        }
+        function fecharVideo(){
+            document.getElementById("popup").style.display = "none";
+
+            document.getElementById("video").src = "";
+        }
+    </script>
+    
+    <div id="popup">
+        <div class="janela">
+            <button onclick="fecharVideo()">X</button>
+            <h2 id="nomeBoss"></h2>
+            <iframe
+                id="video"
+                width="800"
+                height="450"
+                src=""
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
 
     <body>
         <header class="header">
@@ -20,35 +50,267 @@
             </nav>
         </header>
 
+        <div class="banner2"></div>
+
         <main class="conteudo">
+            
+
+            <div class="tituloPagina">
+                <h1>Bosses Principais</h1>
+                <p>Vamos conferir os inimigos principais e Obrigatórios do jogo!</p>
+            </div>
             <section class="secConteudo">
                 <div class="topo">
                     <div class="texto">
                         <p class="dataAtual"><script>
-                    data = new Date
+                        data = new Date
 
-                    //Dia da Semana
-                    diaSemana = new Array('Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado')
+                        //Dia da Semana
+                        diaSemana = new Array('Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado')
 
-                    mes = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro')
+                        mes = new Array('Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro')
 
                     
-                    document.write(diaSemana[data.getDay()] + ', ' + data.getDate() + ' de ' + mes[data.getMonth()] + ' de ' + data.getFullYear())
+                        document.write(diaSemana[data.getDay()] + ', ' + data.getDate() + ' de ' + mes[data.getMonth()] + ' de ' + data.getFullYear())
                 </script></p>
                     </div>
                 </div>
             </section>
-
-            <div class="tituloPagina">
-                <h1>Bosses</h1>
-                <p>Vamos conferir os inimigos principais do jogo!</p>
-            </div>
-            
+            <!--Padre Gascoigne-->
             <section class="conteudoBosses">
                 <div class="topo">
+                    <script>
+                        videoPadreGascoigne = "https://www.youtube.com/embed/BSqXQBx-mDs"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_PadreGascoigne.jpg" alt="" onclick="abrirVideo('Padre Gascoigne', videoPadreGascoigne)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Padre Gascoigne</h1>
+                        
+                        <p>
+                            O <strong class="nomeBoss">Padre Gascoigne</strong> pode primeiro ser encontrado como uma invocação para auxiliar contra a Fera Clerical, e então ele será encontrado novamente como um chefe na Tumba de Oedon. 
+                            Ele é propício à <strong class="mecanica">Parries/Viscerais</strong>, e em sua segunda fase sendo vulnerável a dano de <strong class="danoFogo">Fogo</strong> e a dano de <strong class="danoSerra">Serra</strong>
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Padre Gascoigne</strong> também possui outra fraqueza, sendo essa a <strong class="item">Caixa de Música</strong>, este item quando usado em ambas suas fases causam <strong class="mecanica">Atordoamento</strong>, deixando o chefe propício a ataques, porém, este item só pode ser usado três vezes, e após isso ele automaticamente passará para sua segunda fase independente da quantidade de vida.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!--Amelia-->
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoVigarioAmelia = "https://www.youtube.com/embed/wRViR1Y6qRQ"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_VigarioAmelia.jpg" alt="" onclick="abrirVideo('Vigario Amelia', videoVigarioAmelia)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Vigário Amélia</h1>
+                        
+                        <p>
+                            <strong class="nomeBoss">Vigário Amélia</strong> é necessário para progredir no jogo e derrotá-la vai transformar o estado do mundo para o horário noturno. 
+                            Ela é uma humana que lentamente se transforma em uma variante de uma Fera Clerical, mas de acordo com a história do jogo, sendo mais forte, tornando-a vulnerável ao dano de <strong class="danoFogo">Fogo</strong> e dano de <strong class="danoSerra">Serra</strong>.</p>
+                        <p>
+                            Esta chefe é vulnerável à ataques em sua mão quando usado armas de <strong class="danoSerra">Serra</strong>, deixando <strong class="nomeBoss">Vigário Amélia</strong> atordada após uma quantidade de dano, sendo possível dar um dano crítico em sua cabeça.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!--Sombras-->
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoSombras = "https://www.youtube.com/embed/WzjgnSRMu5U"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Sombras.jpg" alt="" onclick="abrirVideo('Sombras de Yharnam', videoSombras)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Sombras de Yharnam</h1>
+
+                        <p>
+                            A luta contra as <strong class="nomeBoss">Sombras de Yharnam</strong> é uma luta contra três inimigos ao mesmo tempo, onde cada um usa estilos de luta diferentes, sendo um espadachim, um mago, e outro que mistura os dois, após uma certa quantidade de vida eles ativam sua segunda fase onde começam a usar ataques com cobras gigantes.
+                        </p>
+                        <p>
+                            Um dos três é forte contra ataques de dano de <strong class="danoRaio">Raio</strong> e dano de <strong class="danoArcano">Arcano</strong>, porém, os outros são muito vulneráveis a dano de <strong class="danoRaio">Raio</strong>.
+                        </p>
+                        <p>
+                            A melhor estratégia contra esse boss é rodear o mapa, não deixando eles te cercarem, e dar <strong class="mecanica">parries</strong>, fazendo com que sofram bastante de dano, <strong>eliminando primeiramente o espadachim deixa o resto da luta muito mais fácil.</strong>
+                        </p>
+                    </div>  
+                </div>
+            </section>
+            <!--Rom-->
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoRom = "https://www.youtube.com/embed/7Cx05YwxOck"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Rom.jpg" alt="" onclick="abrirVideo('Rom, a Aranha Inexpressiva', videoRom)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Rom, a Aranha Inexpressiva</h1>
+
+                        <p>
+                            <strong class="nomeBoss">Rom</strong> é um chefe do tipo <strong class="mecanica">Semelhante</strong>, ou seja, é extremamente fraco contra ataques que causam dano de <strong class="danoRaio">Raio</strong> e dano de <strong class="danoFogo">Fogo</strong>.
+                        </p>
+                        <p>
+                            Este chefe tem "3" fases, onde a primeira começa quando você der o primeiro ataque, ele fica somente olhando pra você sem dar dano, porém, após certa quantidade dano ele se teleporta, e quando reaparece, <strong>invoca aranhas menores</strong> que causam muito dano. A terceira fase começa após a vida chegar na metade, onde <strong class="nomeBoss">Rom</strong> começa a utilizar ataques a curta e longa distância, dificultando a aproximação. 
+                        </p>
+                        <p>
+                            Tanto <strong class="nomeBoss">Rom</strong> quanto as aranhas menores <strong>recebem dano decente somente em seus corpos</strong>, deixando ataques na cabeça inviáveis. Caso o player seja derrotado, quando refazer a luta as aranhas menores já estarão desde o começo da luta.
+                        </p>
+                    </div>  
+                </div>
+            </section>
+            <!--Renascido-->
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoRenascido = "https://www.youtube.com/embed/Y5zk-91VrX4"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Renascido.webp" alt="" onclick="abrirVideo('O Renascido', videoRenascido)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>O Renascido</h1>
+
+                        <p>
+                            <strong class="nomeBoss">O Renascido</strong> é um boss gigante feito de amontado de partes de corpos sem lógica, sua arena também é grande e contém outros inimigos, sendo esses bruxas que ficam arremesando bolas de fogo no player.
+                        </p>
+                        <p>
+                            Este chefe é fraco contra dano de <strong class="danoRaio">Raio</strong> e dano de <strong class="danoFogo">Fogo</strong>, e forte contra dano de <strong class="danoArcano">Arcano</strong>.
+                         </p>
+                         <p>
+                            A melhor estratégia é utilizar <strong class="item">Papéis de Raio</strong> e atacar com armas que causam bastante dano, <strong>isso quebra sua postura</strong> deixando <strong class="nomeBoss">Renascido</strong> aberto para um <strong class="mecanica">ataque critico</strong>, porém, é mais recomendado que continue atacando, ao invés de realizar o ataque critico.
+                         </p>
+                    </div>  
+                </div>
+            </section>
+            <!--Micolash-->
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoMicolash = "https://www.youtube.com/embed/_ho9mOfnf5Q"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Micolash.jpg" alt="" onclick="abrirVideo('Micolash, o Anfitrão do Pesadelo', videoMicolash)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Micolash, o Anfitrão do Pesadelo</h1>
+
+                        <p>
+                            Considerado o pior boss do jogo, <strong class="nomeBoss">Micolash</strong> é um boss humanóide que corre pela arena, fazendo com que o player o persiga.
+                        </p>
+                        <p>
+                            O objetivo do jogador é fazer com que ele vá para uma sala específica, e então ele ficar encurralado. Após chegar na metade da vida ele irá teleportar e então outra perseguição começa. E o ciclo se repete, porém, dessa vez você terá que ir para um ponto específico onde ele estará.
+                        </p>
+                    </div>  
+                </div>
+            </section>
+            <!--Mergo-->
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoMergo = "https://www.youtube.com/embed/UoV69snuDPo"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Mergo.jpg" alt="" onclick="abrirVideo('Ama-de-Leite de Mergo', videoMergo)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Ama-de-Leite de Mergo</h1>
+
+                        <p>
+                            Este é um dos chefes finais do jogo, <strong class="nomeBoss">Ama-de-Leite de Mergo</strong> é um boss grande com muita resistência e ataques com dano elevado. 
+                        </p>
+                        <p>
+                            Este chefe tem duas fases, sendo a primeira com o boss executando ataques previsiveis, porém, com muito dano e não defensáveis. Na segunda fase, o chefe ataca com mais frequencia, e pode teleportar e invocar clones pela arena.
+                        </p>
+                    </div>  
+                </div>
+            </section>
+            <!--Gehrman-->
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoGehrman = "https://www.youtube.com/embed/MzoUMJgTRd4"
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Gehrman.webp" alt="" onclick="abrirVideo('Gehrman, o Primeiro Caçador', videoGehrman)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Gehrman, o Primeiro Caçador</h1>
+
+                        <p>
+                            O jogo possui três finais, sendo o primeiro <strong>"Submeter sua vida"</strong> onde você aceita sua morte pelas mãos de Gehrman. Porém, caso escolha <strong>"Recusar"</strong>, <strong class="nomeBoss">Gehrman</strong> se torna um dos bosses finais.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Gehrman</strong> é um chefe humanóide com extrema velocidade, seus ataques são repentinos, porém, ainda possíveis de acertar <strong class="mecanica">parries</strong>, ele possui tanto ataques com sua Foice quanto com suas armas de fogo, onde ele consegue dar <strong class="mecanica">parry</strong> no jogador, deixando vulnerável à um ataque fatal.
+                        </p>
+                        <p>
+                            Em sua segunda fase, sua velocidade aumenta e seus ataques causam mais dano e ele começa usar desvios instântaneos, o que deixa o combate muito mais difícil.
+                        </p>
+                    </div>  
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <script>
+                        videoPresenca = ""
+                    </script>
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_PresencadaLua.jpg" alt="" onclick="abrirVideo('Presença da Lua', videoPresenca)">
+                        <p>Clique na imagem para ver uma gameplay!</p>
+
+                    </div>
+                    <div class="texto">
+                        <h1>Presença da Lua</h1>
+
+                        <p>
+                            Este chefe só aparece no terceiro final, sendo o boss final do jogo. Para liberar esse final, é preciso consumir <strong>3</strong> <strong class="item">Terços de Cordão Umbilical</strong>, sendo conseguidos durante o jogo. E após isso, escolher a opção <strong>"Recusar"</strong>, quando falar com Gehrman. Após derrotar o chefe anterior, a <strong class="nomeBoss">Presença da Lua</strong> se revelará, continuando a luta.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Presença da Lua</strong> é um chefe grande e monstruoso, porém, seus ataques são rápidos e causam muito dano.
+                        </p>
+                    </div>  
+                </div>
+            </section>
+
+            <!--Secundarios-->
+            <div class="tituloPagina">
+                <h1>Bosses Opcionais</h1>
+                <p>Vamos conferir os inimigos Secúndarios e Opcionais do jogo! (não considerando chefes de cálice)</p>
+            </div>
+
+            <section class="conteudoBosses">
+                
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_FeraClerical.jpg" alt="">
+                    </div>
                     <div class="texto">
                         <h1>Fera Clerical</h1>
-                        <img src="../img/Foto_FeraClerical.jpg" alt="Boss">
+                        
                         <p>A <strong class="nomeBoss">Fera Clerical</strong> provavelmente será o primeiro chefe que o jogador encontrará, embora derrotá-la seja totalmente opcional. 
                             A <strong class="nomeBoss">Fera Clerical</strong> é extremamente vulnerável a dano de <strong class="danoFogo">Fogo</strong> e a dano de <strong class="danoSerra">Serra</strong>, portanto, usar esses tipos de dano tornará a luta mais fácil.</p>
                     </div>
@@ -56,10 +318,245 @@
             </section>
             <section class="conteudoBosses">
                 <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_EmissarioCelestial.jpg" alt="">
+                    </div>
                     <div class="texto">
-                        <h1>Padre Gascoigne</h1>
-                        <img src="../img/Foto_PadreGascoigne.jpg" alt="Boss">
-                        <p>Aqui ficará o texto do Gascoigne
+                        <h1>Emissário Celestial</h1>
+                        <p>
+                            <strong class="nomeBoss">Emissário Celestial</strong> é um boss opcional da categoria Great One e também um boss de Cálice.
+                        </p>
+                        <p>
+                            O <strong class="nomeBoss">Emissário Celestial</strong> pode ser encontrado nos Jardins de Lumenflower, localizada na Catedral Superior. Também pode ser encontradop no Cálice de Isz.
+                        </p>
+                        <p>
+                            Este boss tem uma mecânica onde ele invoca clones que atacarão no lugar dele, e após você dar dano suficente no chefe, ele para de invocar e se transforma numa versão gigante de si mesmo, porém, se der dano suficiente é possível matá-lo antes dele trocar de fase. Ele pode ser identificado entre seus clones como o único que não avança para atacar.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Emissário Celestial</strong> tem fraqueza a dano de <strong class="danoFogo">Fogo</strong> e a dano de <strong class="danoRaio">Raio</strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Ebrietas.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Ebrietas, Filha do Cosmos</h1>
+                        <p>
+                            <strong class="nomeBoss">Ebrietas</strong> é um inimigo do tipo <strong class="mecanica">Semelhante</strong>, o que significa que este boss é vulnerável a dano de <strong class="danoRaio">Raio</strong>. Ela é localizada no Altar do Desespero, que é próximo a área do Emissário Celestial.
+                        </p>
+                        <p>
+                            Este boss é vulnerável a ataques em sua cabeça, que após um tempo é <strong class="mecanica">Atordoada</strong> liberando uma ataque crítico.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_FeraSedentadeSangue.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Fera Sedenta de Sangue</h1>
+                        <p>
+                            A <strong class="nomeBoss">Fera Sedenta de Sangue</strong> é um boss opcional encontrado no final da Antiga Yharnam. É um boss do tipo <strong class="mecanica">Fera</strong>, ou seja, é vulnerável a dano de <strong class="danoFogo">Fogo</strong>.
+                        </p>
+                        <p>
+                            Este boss pode ser distraido usando o item <strong class="item">Coquetel de Sangue Pungente</strong>, onde ele perde o foco do player para ir atrás do item arremessado, abrindo brecha para ataques.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Bruxa.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Bruxas de Hemwick</h1>
+                        
+                        <p>
+                            <strong class="nomeBoss">Bruxas de Hemwick</strong> são encontradas na região de Alamedas de Hemwick.
+                        </p>
+                        <p>
+                            As <strong class="nomeBoss">Bruxas de Hemwick</strong> podem ser encontradas na Mansão das Bruxas, localizada ao final da área de Alamedas de Hemwick.
+                        </p>
+                        <p>
+                            Este boss possui uma mecânica única baseada em invocações. As bruxas são praticamente indefesas, mas convocam servos chamados Mad Ones para atacar o jogador. Durante a luta, uma segunda bruxa surgirá após certo tempo. As duas se teleportam pela arena e ficam invisíveis quando não estão atacando. Quanto maior a quantidade de <strong class="mecanica">Discernimento</strong> do jogador, mais servos serão invocados, tornando o combate mais difícil.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Bruxas de Hemwick</strong> possuem fraqueza a dano de <strong class="danoRaio">Raio</strong> e podem ser derrotadas com mais facilidade ao focar em encontrá-las rapidamente antes que acumulem muitos servos na arena.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Logarius.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Mártir Logarius</h1>
+                        
+                        <p>
+                            O <strong class="nomeBoss">Mártir Logarius</strong> pode ser encontrado no topo do Castelo Abandonado de Cainhurst, em uma área chamada Trono de Logarius.
+                        </p>
+                        <p>
+                            Este boss possui duas fases distintas. Na primeira fase, ele utiliza principalmente ataques arcanos de longa distância, lançando projéteis em forma de caveiras e explosões mágicas. Após perder parte da vida, ele inicia a segunda fase, tornando-se muito mais agressivo e passando a utilizar ataques corpo a corpo, investidas aéreas e espadas espectrais que perseguem o jogador. Durante a transformação, é possível interrompê-lo com um ataque carregado pelas costas para facilitar o combate.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Mártir Logarius</strong> possui alta resistência a dano de <strong class="danoFogo">Fogo</strong>, <strong class="danoRaio">Raio</strong> e Arcano. A melhor estratégia é aproveitar as oportunidades de aparar seus ataques com armas de fogo e executar ataques viscerais durante a segunda fase.
+                         </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Paarl.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Paarl, Fera Negra</h1>
+                        
+                        <p>
+                            O <strong class="nomeBoss">Paarl, Fera Negra</strong> pode ser encontrado após o jogador ser capturado por um Sequestrador e levado para a Prisão Hypogean Gaol. A arena do boss fica localizada em uma grande câmara subterrânea acessível pela área.
+                        </p>
+                        <p>
+                            Este boss é uma enorme criatura esquelética envolta por eletricidade. Sua principal mecânica consiste em utilizar ataques rápidos e explosões de energia elétrica para pressionar o jogador. Ao causar dano suficiente em suas pernas, é possível derrubá-lo temporariamente, interrompendo sua aura elétrica e criando uma oportunidade para causar grande quantidade de dano. Após se recuperar, Paarl tentará restaurar sua eletricidade e continuará utilizando ataques de área e investidas velozes.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Paarl, Fera Negra</strong> tem fraqueza a dano de <strong class="danoFogo">Fogo</strong> e pode ser derrotado com mais facilidade ao focar seus ataques nas pernas para derrubá-lo repetidamente.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Amygdala.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Amygdala</h1>
+                        
+                        <p>
+                            A <strong class="nomeBoss">Amygdala</strong> pode ser encontrada ao final da Fronteira do Pesadelo, uma região repleta de criaturas e perigos. Também pode ser encontrada como boss em alguns Cálices.
+                        </p>
+                        <p>
+                            Este boss é uma gigantesca criatura de múltiplos braços que utiliza ataques de longo alcance e golpes capazes de atingir grande parte da arena. Durante a luta, Amygdala frequentemente expõe sua cabeça e braços, que são seus pontos mais vulneráveis. Na fase final, ela arranca dois de seus próprios braços para utilizá-los como armas, aumentando significativamente o alcance e o dano de seus ataques. Permanecer atento aos seus saltos e golpes esmagadores é essencial para sobreviver.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Amygdala</strong> tem fraqueza a dano de <strong class="danoArcano">Arcano</strong> e recebe dano adicional ao ser atingida na cabeça, seu principal ponto fraco.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tituloPagina">
+                <h1>Bosses DLC - Old Hunters</h1>
+                <p>Vamos conferir os inimigos da DLC Old Hunter!</p>
+            </div>
+
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Ludwig.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Ludwig, o Amaldiçoado</h1>
+                        
+                        <p>
+                            <strong class="nomeBoss">Ludwig, o Amaldiçoado</strong> pode ser encontrado no Pesadelo do Caçador, em uma grande arena localizada após os rios de sangue e cadáveres da região. Ele foi o primeiro Caçador da Igreja de Cura e, após sucumbir à praga, transformou-se em uma monstruosa aberração.
+                        </p>
+                        <p>
+                            Este boss possui duas fases distintas. Na primeira, Ludwig luta como uma criatura bestial extremamente agressiva, utilizando investidas rápidas, saltos e ataques imprevisíveis que cobrem grande parte da arena. Após perder cerca de metade da vida, ele recupera parte de sua sanidade ao encontrar a lendária Holy Moonlight Sword. Na segunda fase, passa a lutar de forma mais controlada, combinando golpes poderosos com ataques de energia arcana disparados por sua espada, tornando-se ainda mais perigoso.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Ludwig, o Amaldiçoado</strong> tem fraqueza a dano de <strong class="danoFogo">Fogo</strong> e pode ser atordoado ao sofrer dano suficiente em determinadas partes do corpo, criando oportunidades para ataques viscerais.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Falhas.png" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Falhas Vivas</h1>
+                        
+                        <p>
+                            As <strong class="nomeBoss">Falhas Vivas</strong> podem ser encontradas no Jardim dos Girassóis Celestiais, localizado no topo do Salão de Pesquisas.
+                        </p>
+                        <p>
+                            Este boss consiste em múltiplas criaturas que compartilham uma única barra de vida. Durante a batalha, novas Falhas Vivas surgem constantemente na arena para substituir aquelas que forem derrotadas. Elas utilizam ataques físicos lentos, projéteis arcanos e golpes de longo alcance com seus braços. Em determinados momentos, o grupo pode conjurar uma poderosa chuva de meteoros que cobre grande parte da arena, obrigando o jogador a utilizar os obstáculos do cenário para se proteger.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Falhas Vivas</strong> têm fraqueza a dano de <strong class="danoRaio">Raio</strong> e podem ser facilmente interrompidas durante a conjuração de alguns de seus ataques arcanos.
+                        </p>
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_LadyMaria.webp" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Lady Maria da Torre do Relógio Astral</h1>
+                        
+                        <p>
+                            A <strong class="nomeBoss">Lady Maria da Torre do Relógio Astral</strong> pode ser encontrada no topo da Torre do Relógio Astral, após a área do Salão de Pesquisas.
+                        </p>
+                        <p>
+                            Este boss possui três fases distintas. Na primeira, Lady Maria utiliza sua Rakuyo para executar rápidos combos corpo a corpo e ataques de grande alcance. Após perder parte da vida, ela passa a utilizar seu próprio sangue para fortalecer seus golpes, aumentando o alcance e o dano de seus ataques. Na fase final, seus ataques ficam envoltos em chamas sangrentas, criando explosões e ondas de energia capazes de atingir o jogador mesmo à distância. Apesar de sua agressividade, muitos de seus golpes podem ser aparados com armas de fogo, abrindo oportunidades para ataques viscerais.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Lady Maria da Torre do Relógio Astral</strong> tem fraqueza a ataques viscerais e pode ser interrompida com facilidade por aparos bem executados durante grande parte do combate.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Orfão.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Orfão de Kos</h1>
+                        
+                        <p>
+                            O <strong class="nomeBoss">Órfão de Kos</strong> pode ser encontrado na costa da Vila de Pesca, logo após o cadáver de Kos. Sua derrota encerra os eventos principais da expansão.
+                        </p>
+                        <p>
+                            Este boss possui duas fases extremamente agressivas. Na primeira, o Órfão utiliza a própria placenta como arma, realizando ataques rápidos, investidas e combos imprevisíveis que podem punir qualquer erro do jogador. Após perder parte de sua vida, ele entra em uma segunda fase ainda mais violenta, adquirindo aparência mais monstruosa e ganhando grande mobilidade. Nessa etapa, passa a utilizar ataques elétricos, saltos de longa distância e sequências de golpes capazes de cobrir praticamente toda a arena. Apesar da agressividade, diversos de seus ataques podem ser aparados com armas de fogo quando executados no momento correto.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Órfão de Kos</strong> tem fraqueza a dano de <strong class="danoRaio">Raio</strong> e pode sofrer ataques viscerais após aparos bem-sucedidos ou ao receber dano suficiente em sua cabeça.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="conteudoBosses">
+                <div class="topo">
+                    <div class="imagemBoss">
+                        <img src="../img/Foto_Laurence.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <h1>Laurence, o Primeiro Vigário</h1>
+
+                        <p>
+                            <strong class="nomeBoss">Laurence, o Primeiro Vigário</strong> pode ser encontrado na Grande Catedral do Pesadelo do Caçador após o jogador obter o Crânio de Laurence. Ele foi o fundador da Igreja de Cura e um dos responsáveis pelos eventos que levaram à queda de Yharnam.
+                        </p>
+                        <p>
+                            Este boss possui duas fases distintas. Na primeira, Laurence luta de forma semelhante à Fera Clerical, utilizando golpes amplos, investidas e ataques devastadores com seus braços envoltos em fogo. Após perder parte de sua vida, ele entra em uma segunda fase na qual perde o uso das pernas e passa a rastejar pela arena, deixando rastros de lava que permanecem no chão e causam dano contínuo. Seus ataques tornam-se mais difíceis de evitar devido ao alcance das chamas e às áreas perigosas espalhadas pela arena.
+                        </p>
+                        <p>
+                            <strong class="nomeBoss">Laurence, o Primeiro Vigário</strong> tem fraqueza a dano de <strong class="danoRaio">Raio</strong> e pode ser atordoado ao sofrer dano suficiente em seus membros, criando oportunidades para ataques viscerais.
+                        </p>
                     </div>
                 </div>
             </section>
