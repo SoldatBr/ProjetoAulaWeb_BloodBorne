@@ -3,27 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="/img/Bloodborne-Emblem.png" type="image/x-con">
+        <link rel="icon" href="img/Bloodborne-Emblem.png" type="image/x-icon">
         <title>BorneLIKE</title>
-        <script type="text/JavaScript">
+    </head>
+    <script type="text/JavaScript">
             //Função para abrir a POP-UP
             function abrirDetalhes(nome,img,desc){
                 url=`pop_produtos.html?produto=${encodeURIComponent(nome)}&imagem=${encodeURIComponent(img)}&descricao=${encodeURIComponent(desc)}`
-                window.open(url, "_blank", "width=800, height=700")
+                window.open(url, "_blank", "width=800, height=700")}
         </script>
-
-    </head>
 
     <body>
         <header class="header">
             <div class="logo">
-                <a href="../index.html"><img class="logo" src="img/Bloodborne-Emblem.png" alt="logo"></a>
+                <a href="index.html"><img class="logo" src="img/Bloodborne-Emblem.png" alt="logo"></a>
             </div>
             
             <nav class="menu">
-                <a href="#">Inicio</a>
-                <a href="/telas/bossesTela.html">Bosses</a>
-                <a href="#">Armas</a>
+                <a href="index.html">Inicio</a>
+                <a href="telas/bossesTela.html">Bosses</a>
+                <a href="telas/galeria.html">Galeria</a>
             </nav>
         </header>
 
@@ -134,13 +133,14 @@
 
         </main>
 
-    </body>
-
-    <footer>
+        <footer>
         <img class="logo" src="img/Bloodborne-Emblem.png" alt="">
         <p>
             <a href="https://www.fromsoftware.jp/ww/" target="_blank"><i class="fromSite"></i>Site Oficial da FromSoftware</a>
         </p>
     </footer>
+    </body>
+
+    
 
 </html>
